@@ -36,6 +36,7 @@ const EndGame = () => {
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full object-cover"
+                unoptimized
               />
               <div>
                 <div className="font-semibold text-white">{user.name}</div>
