@@ -6,7 +6,7 @@ interface CountdownTimerProps {
 }
 
 const CountdownTimer = ({ duration }: CountdownTimerProps) => {
-  const { timeLeft, displayTime, strokeDashoffset, circumference, radius } =
+  const { displayTime, strokeDashoffset, circumference, radius } =
     useTimer(duration);
 
   return (

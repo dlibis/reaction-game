@@ -1,4 +1,3 @@
-import { updateScore } from "@/app/actions/updateScore";
 import { ROUND_DURATION_MS } from "@/app/constants/game-config";
 import { Feedback } from "@/app/types/game";
 import { useGameStore } from "@/lib/gameStore";
@@ -60,7 +59,7 @@ export const useRunGame = () => {
       }
       setupRound();
     },
-    [screenState, indicatorSide, clearAllTimers, setupRound]
+    [screenState, indicatorSide, clearAllTimers, setupRound, updateUserScore]
   );
 
   useEffect(() => {

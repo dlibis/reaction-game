@@ -1,5 +1,6 @@
 import { getUsers } from "@/app/actions/getUsers";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const EndGame = () => {
   const [usersBoard, setUsersBoard] = useState<User[]>([]);
@@ -29,9 +30,11 @@ const EndGame = () => {
               <div className="flex items-center justify-center w-8 h-8 bg-gray-700 rounded-full text-sm font-semibold">
                 {index + 1}
               </div>
-              <img
+              <Image
                 src={user.image}
                 alt={user.name}
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-full object-cover"
               />
               <div>

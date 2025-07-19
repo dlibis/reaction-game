@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useGameStore } from "@/lib/gameStore";
-import { useState } from "react";
 
 const schema = z.object({
   name: z.string().min(1),
@@ -19,26 +18,18 @@ const StartGame = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = async (data: any) => {
-    try {
-      const response = await fetch("/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+  const onSubmit = async (data: z.infer<typeof schema>) => {
+    const response = await fetch("/api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-      if (response.ok) {
-        const user = await response.json();
-        setUser(user);
-        setGameState("playing");
-      } else {
-        console.error("Failed to create user");
-      }
-    } catch (error) {
-      console.error("Error creating user:", error);
-    }
+    const user = await response.json();
+    setUser(user);
+    setGameState("playing");
   };
 
   return (

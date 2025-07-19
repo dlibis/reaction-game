@@ -23,5 +23,5 @@ export const useTimer = (duration: number) => {
   const strokeDashoffset = circumference - (progress / 100) * circumference;
   const displayTime = Math.max(0, Math.floor(timeLeft / 100)) / 10;
 
-  return { timeLeft, displayTime, strokeDashoffset, circumference, radius };
+  return { displayTime, strokeDashoffset, circumference, radius };
 };

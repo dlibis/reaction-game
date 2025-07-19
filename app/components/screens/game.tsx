@@ -15,7 +15,7 @@ const Game = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-center">
           <div className="text-2xl mb-4">Get Ready...</div>
           <div className="text-lg text-gray-400">
-            Press 'a' for left, 'l' for right
+            Press &apos;a&apos; for left, &apos;l&apos; for right
           </div>
         </div>
       )}
