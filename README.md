@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a proof-of-concept (POC) web application that tests and provides feedback on user reaction time and quick decision making. The project is built using React + TypeScript with a focus on MVP approach and rapid development.
+This is a proof-of-concept (POC) web application that tests and provides feedback on user reaction time and quick decision making. The project is built using React +Next.js + TypeScript with a focus on MVP approach and rapid development.
 
 ## Goal
 
