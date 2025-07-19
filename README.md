@@ -1,4 +1,4 @@
-# mavens° Reaction Game
+# Reaction Game
 
 ## Overview
 
